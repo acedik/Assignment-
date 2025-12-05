@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Same CSS as above usually applies here unless overridden */
+        body { font-family: sans-serif; padding: 10px; }
+        .network-item { border-bottom: 1px solid #ccc; padding: 10px; }
+        .btn { padding: 10px; background: red; color: white; text-decoration: none; display:inline-block; margin:5px;}
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Attack Panel</h1>
+    </div>
+
+    <div>
+        <a href="/admin?deauth={deauth_state}" class="btn">{deauth_button}</a>
+        <a href="/admin?hotspot={hotspot_state}" class="btn">{hotspot_button}</a>
+    </div>
+
+    <br>
+    
+    <div id="network-list">
+        <div class="network-item">
+            <a href="/admin?ap=BSSID_HERE">
+                <b>SSID_NAME</b>
+            </a><br>
+            BSSID: 00:11:22:33:44:55<br>
+            Channel: 1<br>
+            <span>{Selected/Select}</span>
+        </div>
+    </div>
+    
+    <div style="background:lightgreen;">
+        {Captured_Password_Here}
+    </div>
+
+</body>
+</html>
